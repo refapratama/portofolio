@@ -1,0 +1,85 @@
+/* ================================================
+    Ini file CSS gue
+    Nama   : Muhammad Refa Pratama
+    Tugas  : Latihan CSS - Kartu Nama Digital
+    Catatan: File ini gue sambungin ke index.html
+             pake tag <link> di bagian <head>
+   ================================================ */
+
+
+/* -- BODY --
+   Ini styling buat seluruh halaman.
+   Gue kasih background abu-abu muda biar kartu
+   putihnya keliatan lebih menonjol */
+body {
+    background-color: #f4f4f4; /* warna background halaman, abu-abu muda */
+    font-family: Arial, Helvetica, sans-serif; /* font sans-serif biar keliatan bersih */
+    margin: 0; /* hapus margin bawaan browser */
+    padding: 0; /* hapus padding bawaan browser */
+}
+
+
+/* -- CARD --
+   Ini kotak utama kartu nama gue.
+   Di sini gue terapin Box Model:
+   margin buat jarak luar, padding buat jarak dalam */
+.card {
+    background-color: white; /* background kartu putih */
+    width: 350px; /* lebar kartu gue tetapin 350px */
+    padding: 20px; /* jarak dalam biar konten ga nempel ke tepi kartu */
+    margin: 50px auto; /* 50px dari atas-bawah, auto biar kartu ada di tengah */
+    border-radius: 15px; /* sudut kartu gue bikin melengkung */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* bayangan tipis biar kartu keliatan nampak */
+    text-align: center; /* semua teks di dalam kartu rata tengah */
+}
+
+
+/* -- FOTO PROFIL --
+   Gue styling foto biar berbentuk lingkaran,
+   bukan kotak default dari browser */
+.foto-profil {
+    border-radius: 50%; /* ini yang bikin foto jadi lingkaran */
+    width: 150px; /* lebar foto */
+    height: 150px; /* tinggi foto, samain sama lebar biar proporsional */
+    margin-bottom: 15px; /* jarak bawah foto ke nama */
+    border: 3px solid #e0e0e0; /* garis tepi tipis buat aksen */
+}
+
+
+/* -- HEADING / NAMA --
+   Styling buat nama lengkap gue di kartu */
+h1 {
+    font-size: 22px; /* ukuran tulisan nama */
+    color: #1a1a1a; /* warna gelap biar enak dibaca */
+    margin: 10px 0 8px; /* jarak atas 10px, bawah 8px */
+}
+
+
+/* -- BIO --
+   Ini paragraf deskripsi singkat tentang gue */
+.bio {
+    font-size: 14px; /* ukuran tulisan bio lebih kecil dari nama */
+    color: #666666; /* warna abu-abu biar ga terlalu kontras sama background */
+    line-height: 1.7; /* jarak antar baris biar ga keliatan rapet */
+    margin-bottom: 20px; /* jarak bawah bio ke tombol */
+}
+
+
+/* -- BUTTON --
+   Ini tombol "Hubungi Saya".
+   Kalau diklik, langsung redirect ke WhatsApp gue */
+button {
+    background-color: #0077cc; /* warna tombol biru */
+    color: white; /* tulisan tombol putih biar kontras */
+    border: none; /* hapus garis tepi bawaan button */
+    padding: 12px 32px; /* jarak dalam tombol biar ga kekecilan */
+    font-size: 14px; /* ukuran tulisan di tombol */
+    border-radius: 8px; /* sudut tombol gue bikin sedikit melengkung */
+    cursor: pointer; /* kursor jadi tangan waktu diarahin ke tombol */
+    transition: background-color 0.2s; /* animasi transisi warna pas hover */
+}
+
+/* Ini yang jalan waktu mouse diarahin ke tombol */
+button:hover {
+    background-color: #005fa3; /* warna tombol jadi lebih gelap saat di-hover */
+}
