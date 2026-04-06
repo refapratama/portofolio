@@ -1,26 +1,23 @@
-/* Styling Body sesuai instruksi: Background abu-abu muda */
 body {
   background-color: #f4f4f4;
-  font-family: 'Inter', sans-serif; /* Tipografi Sans-Serif */
+  font-family: 'Inter', sans-serif;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Membantu memastikan card benar-benar di tengah secara vertikal */
+  min-height: 100vh;
 }
 
-/* The Box Model untuk .card (Kriteria 3) */
 .card {
-  background-color: white;       /* Latar putih */
-  width: 350px;                  /* Lebar 350px mutlak */
-  padding: 30px 20px;            /* Padding agar konten tidak menempel (Instruksi minta 20px) */
-  margin: 50px auto;             /* Margin tengah */
-  border-radius: 15px;           /* Sudut melengkung */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Efek bayangan halus */
-  text-align: center;            /* Teks di tengah */
+  background-color: white;
+  width: 350px;
+  padding: 30px 20px;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-/* Styling Gambar agar bulat dan proporsional */
 .profile-img {
   width: 120px;
   height: 120px;
@@ -30,25 +27,37 @@ body {
   border: 3px solid #f4f4f4;
 }
 
-/* Tipografi untuk Nama dan Bio */
 h1 {
   font-size: 22px;
-  color: #1c1916; /* Menggunakan warna text dari tema lu */
+  color: #1c1916;
   margin: 0 0 8px 0;
-  font-weight: 600;
 }
 
-p {
+.bio {
   font-size: 14px;
-  color: #7a7068; /* Warna text muted dari tema lu */
+  color: #7a7068;
   line-height: 1.6;
   margin: 0 0 24px 0;
-  font-weight: 300;
 }
 
-/* Styling Button sesuai instruksi (Biru, no border, padding, pointer) */
+/* Styling link WhatsApp */
+.wa-link {
+  color: #25d366; /* Warna khas WA */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.wa-link:hover {
+  text-decoration: underline;
+}
+
+/* Styling Button agar tidak berubah saat dibungkus link */
+.btn-wrapper {
+  text-decoration: none;
+}
+
 button {
-  background-color: #0066cc; /* Warna biru profesional */
+  background-color: #0066cc;
   color: white;
   border: none;
   padding: 12px 28px;
@@ -56,9 +65,9 @@ button {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  width: 100%; /* Biar tombolnya panjang memenuhi card */
 }
 
 button:hover {
-  background-color: #0052a3; /* Biru gelap saat dihover */
+  background-color: #0052a3;
 }
