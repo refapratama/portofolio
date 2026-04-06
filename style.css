@@ -1,0 +1,129 @@
+/* ================================================
+    Ini file CSS gue
+    Nama   : Muhammad Refa Pratama
+    Tugas  : Latihan CSS - Kartu Nama Digital
+    Catatan: File ini gue sambungin ke index.html
+             pake tag <link> di bagian <head>
+   ================================================ */
+
+
+/* -- VARIABEL WARNA --
+   Gue simpen semua warna di sini biar gampang diubah
+   kalau suatu saat mau ganti tema */
+:root {
+    --bg:       #f5f2ec; /* warna background halaman, krem hangat */
+    --white:    #ffffff; /* warna putih buat kartu */
+    --border:   #e4dfd5; /* warna garis tepi, coklat muda */
+    --border2:  #d6cfc3; /* warna garis tepi yang lebih gelap */
+    --accent:   #7a6652; /* warna utama gue, coklat hangat */
+    --accent2:  #a08468; /* coklat yang lebih muda buat teks sekunder */
+    --text:     #1c1916; /* warna teks utama, hampir hitam */
+    --muted:    #7a7068; /* warna teks abu-abu buat bio */
+    --subtle:   #b0a898; /* warna teks paling pudar buat role */
+}
+
+
+/* -- BODY --
+   Gue styling seluruh halaman di sini.
+   Background krem hangat biar kartu putihnya
+   keliatan lebih elegan */
+body {
+    background-color: var(--bg); /* background halaman warna krem */
+    font-family: 'Inter', Arial, sans-serif; /* font utama gue */
+    font-weight: 300; /* tipis biar keliatan modern */
+    margin: 0; /* hapus margin bawaan browser */
+    padding: 0; /* hapus padding bawaan browser */
+}
+
+
+/* -- CARD (BOX MODEL) --
+   Ini kotak utama kartu nama gue.
+   Gue terapin Box Model di sini:
+   margin buat jarak luar, padding buat jarak dalam */
+.card {
+    background-color: var(--white); /* background kartu putih */
+    width: 350px; /* lebar kartu gue tetapin 350px */
+    padding: 36px 32px; /* jarak dalam biar konten ga nempel ke tepi */
+    margin: 60px auto; /* 60px dari atas-bawah, auto biar kartu di tengah halaman */
+    border-radius: 16px; /* sudut kartu gue bikin melengkung */
+    border: 1px solid var(--border); /* garis tepi tipis warna krem */
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.07); /* bayangan halus biar kartu keliatan nampak */
+    text-align: center; /* semua teks di dalam kartu rata tengah */
+}
+
+
+/* -- FOTO PROFIL --
+   Gue styling foto biar berbentuk lingkaran */
+.foto-profil {
+    border-radius: 50%; /* ini yang bikin foto jadi lingkaran */
+    width: 150px; /* lebar foto */
+    height: 150px; /* tinggi foto, samain sama lebar biar proporsional */
+    margin-bottom: 18px; /* jarak bawah foto ke nama */
+    border: 2px solid var(--border2); /* garis tepi foto warna coklat muda */
+    object-fit: cover; /* biar foto ga terdistorsi */
+}
+
+
+/* -- HEADING / NAMA --
+   Styling buat nama lengkap gue */
+h1 {
+    font-family: 'Lora', serif; /* font Lora buat nama biar keliatan elegan */
+    font-size: 22px; /* ukuran tulisan nama */
+    font-weight: 700; /* tebal */
+    color: var(--text); /* warna gelap biar enak dibaca */
+    letter-spacing: -0.3px; /* jarak antar huruf dikurangin dikit */
+    margin: 0 0 6px; /* gak ada margin atas, 6px margin bawah */
+}
+
+
+/* -- ROLE --
+   Teks kecil di bawah nama buat nunjukin bidang gue */
+.role {
+    font-size: 12px; /* ukuran tulisan kecil */
+    color: var(--subtle); /* warna pudar biar ga terlalu dominan */
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin: 0 0 16px; /* jarak bawah ke garis pemisah */
+    padding-bottom: 16px; /* jarak dalam sebelum garis */
+    border-bottom: 1px solid var(--border); /* garis pemisah bawah role */
+}
+
+
+/* -- BIO --
+   Paragraf deskripsi singkat tentang gue */
+.bio {
+    font-size: 14px; /* ukuran tulisan bio */
+    color: var(--muted); /* warna abu-abu coklat biar ga terlalu kontras */
+    line-height: 1.75; /* jarak antar baris biar ga rapet */
+    margin-bottom: 24px; /* jarak bawah bio ke tombol */
+    font-weight: 300; /* tipis */
+}
+
+/* Gue bikin kata yang di-bold pake warna lebih gelap */
+.bio strong {
+    color: var(--text); /* warna lebih gelap buat kata penting */
+    font-weight: 500;
+}
+
+
+/* -- BUTTON --
+   Tombol "Hubungi Saya".
+   Kalau diklik, langsung redirect ke WhatsApp gue */
+button {
+    background-color: var(--accent); /* warna tombol coklat hangat sesuai tema */
+    color: white; /* tulisan tombol putih biar kontras */
+    border: none; /* hapus garis tepi bawaan button */
+    padding: 11px 32px; /* jarak dalam tombol biar ga kekecilan */
+    font-size: 13px; /* ukuran tulisan di tombol */
+    font-weight: 500; /* sedikit tebal */
+    font-family: 'Inter', Arial, sans-serif; /* samain font sama body */
+    letter-spacing: 0.02em;
+    border-radius: 8px; /* sudut tombol melengkung */
+    cursor: pointer; /* kursor jadi tangan waktu diarahin ke tombol */
+    transition: background-color 0.2s; /* animasi transisi warna pas hover */
+}
+
+/* Ini yang jalan waktu mouse diarahin ke tombol */
+button:hover {
+    background-color: #6a5644; /* warna tombol jadi lebih gelap saat di-hover */
+}
