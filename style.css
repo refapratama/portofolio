@@ -1,73 +1,548 @@
-body {
-  background-color: #f4f4f4;
-  font-family: 'Inter', sans-serif;
+/* ===========================
+   CSS Variables & Reset
+   =========================== */
+:root {
+  --cream:  #F5F2ED;
+  --dark:   #1A1A18;
+  --accent: #2E5BFF;
+  --muted:  #8A8880;
+  --border: #E0DDD8;
+  --white:  #FFFFFF;
+}
+
+* {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   Base & Body
+   =========================== */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--dark);
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-.card {
-  background-color: white;
-  width: 350px;
-  padding: 30px 20px;
-  margin: 50px auto;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ===========================
+   Navigasi
+   =========================== */
+nav {
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  animation: fadeDown 0.6s ease both;
+}
+
+.nav-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--dark);
+}
+
+/* ===========================
+   Hero
+   =========================== */
+.hero {
+  padding: 80px 0 64px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 56px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.7s 0.1s ease both;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 5.5vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.hero-bio {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Tombol Utama */
+.btn-primary {
+  background-color: var(--dark);
+  color: var(--cream);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Tombol Sekunder */
+.btn-secondary {
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.btn-secondary:hover {
+  color: var(--dark);
+}
+
+/* ===========================
+   Hero — Foto & Badge (kanan)
+   =========================== */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-photo-large {
+  width: 220px;
+  height: 270px;
+  object-fit: cover;           /* Foto tidak gepeng/terdistorsi */
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+/* Badge Tahun Pengalaman */
+.hero-badge {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 24px;
   text-align: center;
+  width: 100%;
 }
 
-.profile-img {
-  width: 120px;
-  height: 120px;
+.hero-badge-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  line-height: 1;
+  display: block;
+}
+
+.hero-badge-label {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ===========================
+   Section (Umum)
+   =========================== */
+section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.6s ease both;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
+}
+
+/* ===========================
+   Pengalaman Kerja
+   =========================== */
+.exp-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.exp-item:last-child {
+  margin-bottom: 0;
+}
+
+.exp-period {
+  font-size: 12px;
+  color: var(--muted);
+  padding-top: 3px;
+  line-height: 1.5;
+}
+
+.exp-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 16px;
-  border: 3px solid #f4f4f4;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
-h1 {
-  font-size: 22px;
-  color: #1c1916;
-  margin: 0 0 8px 0;
+.exp-company {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
 }
 
-.bio {
+.exp-role {
+  font-family: 'DM Serif Display', serif;
+  font-size: 19px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.exp-list {
+  list-style: none;
+}
+
+.exp-list li {
   font-size: 14px;
-  color: #7a7068;
-  line-height: 1.6;
-  margin: 0 0 24px 0;
+  color: var(--muted);
+  line-height: 1.65;
+  padding: 4px 0 4px 14px;
+  position: relative;
 }
 
-/* Styling link WhatsApp */
-.wa-link {
-  color: #25d366; /* Warna khas WA */
-  text-decoration: none;
+.exp-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--border);
+  font-size: 12px;
+}
+
+/* ===========================
+   Keterampilan
+   =========================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.skill-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.skill-icon {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.skill-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ===========================
+   Sertifikasi
+   =========================== */
+.cert-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cert-row:last-child {
+  border-bottom: none;
+}
+
+.cert-name {
+  font-size: 14px;
   font-weight: 500;
 }
 
-.wa-link:hover {
-  text-decoration: underline;
+.cert-issuer {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
 }
 
-/* Styling Button agar tidak berubah saat dibungkus link */
-.btn-wrapper {
-  text-decoration: none;
+.cert-badge {
+  font-size: 11px;
+  font-weight: 500;
+  background-color: #E8EDFF;
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  margin-left: 16px;
 }
 
-button {
-  background-color: #0066cc;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
+/* ===========================
+   Pendidikan
+   =========================== */
+.edu-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.edu-row:last-child {
+  margin-bottom: 0;
+}
+
+.edu-period {
+  font-size: 12px;
+  color: var(--muted);
+  padding-top: 3px;
+}
+
+.edu-school {
   font-size: 14px;
   font-weight: 500;
-  cursor: pointer;
-  width: 100%; /* Biar tombolnya panjang memenuhi card */
+  margin-bottom: 2px;
 }
 
-button:hover {
-  background-color: #0052a3;
+.edu-major {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===========================
+   Kontak
+   =========================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--dark);
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.contact-card--static {
+  cursor: default;
+}
+
+.contact-card--static:hover {
+  border-color: var(--border);
+  transform: none;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--cream);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.contact-val {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===========================
+   Animasi
+   =========================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   Responsive — Mobile
+   =========================== */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Hero stack vertical di mobile */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 48px 0 40px;
+    gap: 40px;
+  }
+
+  /* Foto di mobile: lebih kecil & rata tengah */
+  .hero-right {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero-photo-large {
+    width: 110px;
+    height: 135px;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  .hero-badge {
+    width: auto;
+    padding: 12px 20px;
+  }
+
+  /* Stack layout experience & edu */
+  .exp-item,
+  .edu-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  /* Skills 2 kolom di mobile */
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Kontak 1 kolom di mobile */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero actions stack */
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
