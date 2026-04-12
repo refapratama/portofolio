@@ -1,27 +1,220 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kartu Nama Digital - Refa Pratama</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Refa Pratama — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Menghubungkan file CSS eksternal -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="card">
-    <img src="foto gg.jpg" alt="Foto Muhammad Refa Pratama" class="profile-img">
-    
-    <h1>Muhammad Refa Pratama</h1>
-    
-    <p class="bio">
-      Mahasiswa Teknik Informatika UMT yang fokus pada Front-End & Jaringan. <br>
-      Hubungi via WA: <a href="https://wa.me/6288291385419" class="wa-link">088291385419</a>
-    </p>
-    
-    <a href="URL_GITHUB_PAGES_LU_NANTI" class="btn-wrapper">
-      <button>Hubungi Saya</button>
-    </a>
+  <div class="container">
+
+    <!-- NAVIGASI -->
+    <nav>
+      <div class="nav-logo">Refa Pratama</div>
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-content">
+        <span class="hero-tag">Available for Opportunities</span>
+        <h1>Field Tech &<br><em>IT Specialist</em></h1>
+        <p class="hero-bio">
+          Lulusan SMK TKJ & Mahasiswa S1 Teknik Informatika dengan pengalaman
+          nyata di lapangan bersama Telkom Akses. Menggabungkan keahlian hardware,
+          komunikasi klien, dan ketelitian operasional.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/6288291385419" class="btn-primary">Hubungi Saya</a>
+          <a href="mailto:pratamamuhammadrefa@gmail.com" class="btn-secondary">
+            pratamamuhammadrefa@gmail.com →
+          </a>
+        </div>
+      </div>
+
+      <!-- Kolom kanan: foto + badge -->
+      <div class="hero-right">
+        <!--
+          GANTI FOTO:
+          Letakkan foto lu (misal: foto.jpg) di folder yang sama,
+          lalu ubah src="https://via.placeholder.com/240x300" menjadi src="foto.jpg"
+        -->
+        <img
+          src="foto gg.jpg"
+          alt="Muhammad Refa Pratama"
+          class="hero-photo-large"
+        />
+        <div class="hero-badge">
+          <span class="hero-badge-num">3+</span>
+          <span class="hero-badge-label">Years in<br>IT Field</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PENGALAMAN KERJA -->
+    <section id="experience">
+      <div class="section-label">Pengalaman Kerja</div>
+
+      <div class="exp-item">
+        <div class="exp-period">Jul 2025 – Mar 2026</div>
+        <div class="exp-detail">
+          <div class="exp-company"><span class="exp-dot"></span>Telkom Akses</div>
+          <div class="exp-role">Field Technician &amp; Client Support</div>
+          <ul class="exp-list">
+            <li>Eksekusi penarikan &amp; inventarisasi perangkat keras (NTE/Router) di lokasi klien secara akurat dan efisien.</li>
+            <li>Representasi lini depan perusahaan — negosiasi dan edukasi teknis kepada pelanggan.</li>
+            <li>Manajemen aset fisik untuk memastikan sinkronisasi data lapangan dan sistem pusat.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Apr 2023 – Jun 2023</div>
+        <div class="exp-detail">
+          <div class="exp-company"><span class="exp-dot"></span>Telkom Akses</div>
+          <div class="exp-role">Internship — Assurance &amp; Technician</div>
+          <ul class="exp-list">
+            <li>Penggantian hardware, perapihan instalasi kabel, dan Quality Control layanan.</li>
+            <li>Pengelolaan entri data &amp; validasi inventaris teknisi dengan akurasi tinggi.</li>
+            <li>Solusi cepat di lapangan untuk menjaga kepuasan pelanggan.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- KETERAMPILAN -->
+    <section id="skills">
+      <div class="section-label">Keterampilan</div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🔧</div>
+          <div class="skill-name">Hardware Troubleshooting</div>
+          <div class="skill-desc">Diagnosa &amp; perbaikan perangkat keras jaringan dan komputer.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <div class="skill-name">Network Administration</div>
+          <div class="skill-desc">Infrastruktur jaringan, routing, switching — CCNA certified.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📦</div>
+          <div class="skill-name">Asset Management</div>
+          <div class="skill-desc">Manajemen inventaris &amp; validasi data aset lapangan vs sistem.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🤝</div>
+          <div class="skill-name">Client Communication</div>
+          <div class="skill-desc">Komunikasi persuasif &amp; edukasi teknis kepada pelanggan.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <div class="skill-name">Operasional Lapangan</div>
+          <div class="skill-desc">Terbiasa kerja di bawah tekanan dengan SOP ketat.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <div class="skill-name">Administrasi Data</div>
+          <div class="skill-desc">Entri &amp; validasi data inventaris dengan tingkat akurasi tinggi.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERTIFIKASI -->
+    <section id="certifications">
+      <div class="section-label">Sertifikasi</div>
+      <div class="cert-row">
+        <div>
+          <div class="cert-name">BNSP — IT Activities &amp; Network Administration</div>
+          <div class="cert-issuer">Badan Nasional Sertifikasi Profesi</div>
+        </div>
+        <span class="cert-badge">Bersertifikat</span>
+      </div>
+      <div class="cert-row">
+        <div>
+          <div class="cert-name">Cisco CCNAv7 — Introduction to Networks</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+        </div>
+        <span class="cert-badge">Bersertifikat</span>
+      </div>
+      <div class="cert-row">
+        <div>
+          <div class="cert-name">Cisco CCNAv7 — Switching, Routing &amp; Wireless Essentials</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+        </div>
+        <span class="cert-badge">Bersertifikat</span>
+      </div>
+      <div class="cert-row">
+        <div>
+          <div class="cert-name">Cisco CCNAv7 — Enterprise Networking</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+        </div>
+        <span class="cert-badge">Bersertifikat</span>
+      </div>
+    </section>
+
+    <!-- PENDIDIKAN -->
+    <section id="education">
+      <div class="section-label">Pendidikan</div>
+      <div class="edu-row">
+        <div class="edu-period">2024 – Sekarang</div>
+        <div>
+          <div class="edu-school">Universitas Muhammadiyah Tangerang</div>
+          <div class="edu-major">S1 Teknik Informatika</div>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div class="edu-period">2022 – 2024</div>
+        <div>
+          <div class="edu-school">SMK Negeri 1 Tangerang</div>
+          <div class="edu-major">Teknik Komputer dan Jaringan — Nilai Akhir: 85</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="contact">
+      <div class="section-label">Kontak</div>
+      <div class="contact-grid">
+        <a href="https://wa.me/6288291385419" class="contact-card">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-val">0882-9138-5419</div>
+          </div>
+        </a>
+        <a href="mailto:pratamamuhammadrefa@gmail.com" class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">pratamamuhammadrefa@gmail.com</div>
+          </div>
+        </a>
+        <div class="contact-card contact-card--static">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Lokasi</div>
+            <div class="contact-val">Pasar Kemis, Kab. Tangerang</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-copy">© 2026 Muhammad Refa Pratama</span>
+      <span class="footer-copy">Tangerang, Indonesia</span>
+    </footer>
+
   </div>
 
 </body>
